@@ -15,3 +15,5 @@ I deployed my application to Azure App Service, where you can familiarize yourse
 
 Swagger:
 https://systemlabs21-ftfsb5cpdzaefcbg.eastus-01.azurewebsites.net/swagger/index.html
+
+Request JSON equivalent to one in the task you can find in the file SystemLab21RequestExample.json
