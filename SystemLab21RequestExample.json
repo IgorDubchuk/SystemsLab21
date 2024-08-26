@@ -1,0 +1,89 @@
+{
+"stationGraph": [
+{"node1Name": "Station West", "node2Name": "Entry Signal West" },
+{"node1Name": "Entry Signal West", "node2Name": "Point 1" },
+{"node1Name": "Point 1", "node2Name": "Exit Signal West 1" },
+{"node1Name": "Point 1", "node2Name": "Exit Signal West 2" },
+{"node1Name": "Exit Signal West 1", "node2Name": "Exit Signal East 1" },
+{"node1Name": "Exit Signal West 2", "node2Name": "Exit Signal East 2" },
+{"node1Name": "Exit Signal East 1", "node2Name": "Point 2" },
+{"node1Name": "Exit Signal East 2", "node2Name": "Point 2" },
+{"node1Name": "Point 2", "node2Name": "Entry Signal East" },
+{"node1Name": "Entry Signal East", "node2Name": "Station East" }
+],
+"routes": [
+	{
+      "nodes": [
+		{ "key": 1, "value": "Entry Signal West" },
+		{ "key": 2, "value": "Point 1" },
+		{ "key": 3, "value": "Exit Signal West 1" },
+		{ "key": 4, "value": "Exit Signal East 1" }
+      ],
+      "occupied": false
+    },
+	{
+      "nodes": [
+		{ "key": 1, "value": "Entry Signal West" },
+		{ "key": 2, "value": "Point 1" },
+		{ "key": 3, "value": "Exit Signal West 2" },
+		{ "key": 4, "value": "Exit Signal East 2" }
+      ],
+      "occupied": false
+    },
+	{
+      "nodes": [
+        { "key": 1, "value": "Exit Signal East 1" },
+		{ "key": 2, "value": "Point 2" },
+		{ "key": 3, "value": "Entry Signal East" },
+		{ "key": 4, "value": "Station East" }
+      ],
+      "occupied": false
+    },
+	{
+      "nodes": [
+        { "key": 1, "value": "Exit Signal East 2" },
+		{ "key": 2, "value": "Point 2" },
+		{ "key": 3, "value": "Entry Signal East" },
+		{ "key": 4, "value": "Station East" }
+      ],
+      "occupied": false
+    },
+	{
+      "nodes": [
+        { "key": 1, "value": "Entry Signal East" },
+		{ "key": 2, "value": "Point 2" },
+		{ "key": 3, "value": "Exit Signal East 1" },
+		{ "key": 4, "value": "Exit Signal West 1" }
+      ],
+      "occupied": false
+    },
+	{
+      "nodes": [
+        { "key": 1, "value": "Entry Signal East" },
+		{ "key": 2, "value": "Point 2" },
+		{ "key": 3, "value": "Exit Signal East 2" },
+		{ "key": 4, "value": "Exit Signal West 2" }
+      ],
+      "occupied": false
+    },
+	{
+      "nodes": [
+        { "key": 1, "value": "Exit Signal West 1" },
+		{ "key": 2, "value": "Point 1" },
+		{ "key": 3, "value": "Entry Signal West" },
+		{ "key": 4, "value": "Station West" }
+      ],
+      "occupied": true
+    },
+	{
+      "nodes": [
+        { "key": 1, "value": "Exit Signal West 2" },
+		{ "key": 2, "value": "Point 1" },
+		{ "key": 3, "value": "Entry Signal West" },
+		{ "key": 4, "value": "Station West" }
+      ],
+      "occupied": false
+    }	
+],
+"checkRoute": {"startNodeName": "Entry Signal West", "endNodeName": "Exit Signal East 2" }
+}
