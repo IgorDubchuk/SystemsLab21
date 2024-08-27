@@ -2,8 +2,6 @@ using Application;
 using Serilog;
 using Infrastructure;
 using Api.Infrastructure;
-using Newtonsoft.Json.Serialization;
-using Newtonsoft.Json.Converters;
 
 var builder = WebApplication.CreateBuilder(args);
 
