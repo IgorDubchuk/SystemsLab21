@@ -11,7 +11,7 @@ namespace Domain.Routes
             _routeRepository = routeRepository;
         }
 
-        public async Task<Result<Route>> GetSafeRoute(Guid node1Id, Guid node2Id, CancellationToken cancellationToken)
+        public async Task<Result<Route>> GetSafeRouteAsync(Guid node1Id, Guid node2Id, CancellationToken cancellationToken)
         {
             var routesFromNode1ToNode2 = await _routeRepository.GetRoutesFromNode1toNode2(node1Id, node2Id, cancellationToken);
             if (routesFromNode1ToNode2 == null || !routesFromNode1ToNode2.Any())

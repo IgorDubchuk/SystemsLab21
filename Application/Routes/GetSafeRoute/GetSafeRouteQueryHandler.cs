@@ -101,7 +101,7 @@ internal sealed class GetSafeRouteQueryHandler : IRequestHandler<GetSafeRouteQue
         if (endNode == null)
             return Result.Failure<GetSafeRouteQueryResult>(GetSafeRouteErrors.RequestedRouteNodeDoesNotExist);
 
-        var getSafeRouteResult = await _routeService.GetSafeRoute(startNode.Id, endNode.Id, cancellationToken);
+        var getSafeRouteResult = await _routeService.GetSafeRouteAsync(startNode.Id, endNode.Id, cancellationToken);
 
         if (getSafeRouteResult.IsFailure)
             if (getSafeRouteResult.Error == RouteErrors.NoFreeRouteFromNode1ToNode2)
@@ -177,7 +177,6 @@ internal sealed class GetSafeRouteQueryHandler : IRequestHandler<GetSafeRouteQue
             var edgeCreationResult = await StationGraphEdge.Create(new StationGraphEdge.CreateRequest(
                 node1,
                 node2,
-                stationGraphRepository,
                 stationGraphNodeRepository), cancellationToken);
             stationGraphEdgesCreationResults.Add(edgeCreationResult);
         }

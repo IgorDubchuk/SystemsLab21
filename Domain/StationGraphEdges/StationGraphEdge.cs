@@ -1,5 +1,4 @@
 ﻿using Domain.StationGraphNodes;
-using Domain.StationGraphs;
 using SharedKernel;
 
 namespace Domain.StationGraphEdges
@@ -19,7 +18,6 @@ namespace Domain.StationGraphEdges
 
         public sealed record CreateRequest(StationGraphNode Node1,
             StationGraphNode Node2,
-            IStationGraphRepository StationGraphRepository,
             IStationGraphNodeRepository StationGraphNodeRepository);
 
         public static async Task<Result<StationGraphEdge>> Create(CreateRequest request, CancellationToken cancellationToken)
